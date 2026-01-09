@@ -1,30 +1,45 @@
 <%- include("partials/header.ejs") %>
-
+<h1 id="user-name"></h1>
 <main onclick="hideSideBar()">
+           
 
     <img src="/images/news_images/entrance_exam.jpg" alt="web 3 hero image" class="hero-pic">
 
     <section class="side-article">
+        <!-- 
+        TODO: Content here will be load dynamically, from json data 
+        -->
         <h2 class="special-text">New</h2>
         <article>
-            <h3><a href="">Hydrogen VS Electric Cars</a></h3>
-            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+
+            <h3><a href=""><%= highOne.title %></a></h3>
+            <p>
+                <%= highOnePost %>
+             
+                <small><a href="#moreNews">read more</a></small>
+            </p>
+
+            
         </article>
         <!-- line -->
         <hr>
         <article>
-            <h3><a href="">The Downsides of AI Artistry</a></h3>
+            <h3><a href=""><%= highTwo.title %></a></h3>
             <p>
-                What are the possible adverse effects of on-demand AI image generation?
+                <%= highTwoPost%>
+
+                <small><a href="#moreNews">read more</a></small>
             </p>
         </article>
         <!-- line -->
         <hr>
         <article>
-            <h3><a href="">Is VC Funding Drying Up?</a></h3>
+            <h3><a href=""><%= highThree.title%></a></h3>
             <p>
-                Private funding by VC firms is down 50% YOY. We take a look at what that means.
+                <%= highThreePost %>
+                 <small><a href="#moreNews">read more</a></small>
             </p>
+
         </article>
     </section>
 
@@ -43,7 +58,7 @@
 
 <section class="special-info">
     <article>
-        <img src="/images/news_images/sug_prezo.jpg" alt="Retro PC" class="small-size-img">
+        <img src="/images/news_images/sug_prezo.jpg" alt="Fabius A. McCormack" class="small-size-img">
         <h2 class="nums">Fabius A. McCormack</h2>
         <small>January 1, 2026</small>
       
@@ -53,30 +68,31 @@
             Bassa Youth Caucus Election! ......
           
         </p>
-        <h3><a href="">Read More</a></h3>
+        <h3><a href="https://www.facebook.com/share/p/16xT4gXY4e/">Read More</a></h3>
     </article>
     <article>
-        <img src="/images/news_images/sug_prezo.jpg" alt="Retro PC" class="small-size-img">
-        <h2 class="nums">Fabius A. McCormack</h2>
-        <small>January 1, 2026</small>
+        <img src="/images/news_images/congrat.jpg" alt="Matthew Gborzeo" class="small-size-img" width="325px" height="175px" >
+        <h2 class="nums">Congratulations!</h2>
+        <small>December 27, 2025</small>
     
         <p>
-            Grand Bassa University SUG President
-            Fabius A. McCormack wins
-            Bassa Youth Caucus Election! ......
-    
+            To our
+            Facility Manager
+            Mr. Matthew Gborzeo
         </p>
-        <h3><a href="">Read More</a></h3>
+        <h3><a href="https://www.facebook.com/share/p/1BgYN6VVE8/">Read More</a></h3>
     </article>
     <article>
-        <img src="/images/news_images/sug_prezo.jpg" alt="Retro PC" class="small-size-img">
-        <h2 class="nums">Fabius A. McCormack</h2>
-        <small>January 1, 2026</small>
+        <img src="/images/news_images/gbu_prezo.jpg" alt="University President" class="small-size-img">
+        <h2 class="nums">Season greetings</h2>
+        <small>December 24, 2026</small>
     
         <p>
-            Grand Bassa University SUG President
-            Fabius A. McCormack wins
-            Bassa Youth Caucus Election! ......
+        Faculty, Staff and Students of
+        Grand Bassa University ,
+        Season’s greetings to you all.
+        As we celebrate this blessed Christmas season, I extend heartfelt greetings and sincere appreciation to each of you for
+        your dedication, sacrifice, and commitment to the mission of Grand Bassa University throughout .....
     
         </p>
         <h3><a href="">Read More</a></h3>
@@ -85,28 +101,46 @@
 
     <% data.forEach(post => { %>
     <section class="moreNews">
-        <h2 class="nums">
-            <%= post.author %>
-        </h2>
-        <small>
-            <%= post.id %>
-        </small>
-        <div>
-            <!-- <%= post.picture %> -->
-        </div>
-        <p>
+
+       
+
+        <h2 class="author" id="moreNews">
+          Author:  <%= post.author %> 
+
+            <small class="postid"> Post ID:
+                <%= post.id %>
+            </small>
+           
+        </h2> 
+       
+        
+        
+        <p class="post-title">
+           <em class="special-text">Title:</em> <%= post.title %>
+        </p>
+
+       
+        <p class="post"> 
             <%= post.post %>
         
         </p>
+        <p class="post-date">
+            Posted On <%= post.date %>
+        
+        </p>
+
+        <div>
+            <img src="<%= post.picture %> " alt="<%= post.title %>" class="post-img">
+        </div>
+
+        
+
 
         </section>
     <%}); %>
        
 
-<div class="attribution">
-   
-    Coded by <a href="https://github.com/Sayon-okai">Sayon Teah Okai</a>.
-</div>
+
 
 
 <%- include("partials/footer.ejs") %>

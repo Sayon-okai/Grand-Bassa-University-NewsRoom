@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "author": "GBU News Desk",
+    "title": "Grand Bassa University Resumes Academic Activities",
+    "post": "Grand Bassa University has officially resumed academic activities for the new semester. Students returned to campus early Monday morning, and lectures commenced as scheduled across all departments. The administration encouraged students to remain focused and adhere to campus regulations throughout the semester.",
+    "picture": "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
+    "date": "2026-01-05"
+  },
+  {
+    "id": 2,
+    "author": "Student Affairs Office",
+    "title": "Orientation Program Held for Freshmen Students",
+    "post": "The Office of Student Affairs organized a comprehensive orientation program for newly admitted students. The event introduced freshmen to campus life, academic expectations, and available support services. University officials urged students to take advantage of academic counseling and extracurricular opportunities.",
+    "picture": "https://images.unsplash.com/photo-1596496051743-128ddca62f47",
+    "date": "2026-01-06"
+  },
+  {
+    "id": 3,
+    "author": "GBU Sports Unit",
+    "title": "GBU Football Team Begins Training Ahead of Inter-University Games",
+    "post": "The Grand Bassa University football team has commenced intensive training in preparation for the upcoming inter-university sports competition. Coaches expressed confidence in the team’s readiness and called on students to support their athletes during the tournament.",
+    "picture": "https://images.unsplash.com/photo-1571019613576-2d4bb049aa2d",
+    "date": "2026-01-07"
+  },
+  {
+    "id": 4,
+    "author": "Academic Affairs",
+    "title": "New Academic Calendar Released for 2026 Session",
+    "post": "The Academic Affairs Office has released the official academic calendar for the 2026 session. The calendar outlines important dates including registration periods, mid-semester examinations, and final exams. Students are advised to review the schedule carefully and plan accordingly.",
+    "picture": "https://images.unsplash.com/photo-1554774853-d2d6a4aa02bc",
+    "date": "2026-01-08"
+  },
+  {
+    "id": 5,
+    "author": "Library Services",
+    "title": "University Library Extends Reading Hours",
+    "post": "Grand Bassa University Library has announced extended reading hours to better support students during the semester. The library will now remain open until 10:00 PM on weekdays, providing students with additional study time and access to research materials.",
+    "picture": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
+    "date": "2026-01-09"
+  },
+  {
+    "id": 6,
+    "author": "GBU Health Center",
+    "title": "Free Medical Screening Conducted on Campus",
+    "post": "The GBU Health Center successfully conducted a free medical screening exercise for students and staff. Services included blood pressure checks, malaria testing, and general consultations. Participants were encouraged to maintain healthy lifestyles.",
+    "picture": "https://images.unsplash.com/photo-1588776814546-9b121c3b03c3",
+    "date": "2026-01-10"
+  },
+  {
+    "id": 7,
+    "author": "ICT Department",
+    "title": "University Launches New Online Student Portal",
+    "post": "The ICT Department has launched a new online student portal designed to improve access to academic records, course registration, and announcements. Students are advised to update their login details and report any technical issues to the ICT help desk.",
+    "picture": "https://images.unsplash.com/photo-1581091215366-9941d89a0b85",
+    "date": "2026-01-11"
+  },
+  {
+    "id": 8,
+    "author": "GBU Research Unit",
+    "title": "Faculty Members Present Research at National Conference",
+    "post": "Several faculty members from Grand Bassa University recently presented research papers at a national academic conference. The presentations highlighted the university’s commitment to research, innovation, and national development.",
+    "picture": "https://images.unsplash.com/photo-1581093458360-9858f89f1f17",
+    "date": "2026-01-12"
+  },
+  {
+    "id": 9,
+    "author": "Campus Security",
+    "title": "University Strengthens Campus Security Measures",
+    "post": "The university administration has announced enhanced security measures across campus to ensure the safety of students and staff. Additional security personnel have been deployed, and students are encouraged to report suspicious activities immediately.",
+    "picture": "https://images.unsplash.com/photo-1591793770796-26928b84d8f1",
+    "date": "2026-01-13"
+  },
+  {
+    "id": 10,
+    "author": "Public Relations Office",
+    "title": "GBU Celebrates Outstanding Students at Award Ceremony",
+    "post": "Grand Bassa University held an award ceremony to recognize outstanding students for academic excellence and leadership. University officials praised the recipients and encouraged all students to strive for excellence in their studies and personal development.",
+    "picture": "https://images.unsplash.com/photo-1573164574393-6a5c7f71d2b7",
+    "date": "2026-01-14"
+  }
+]
