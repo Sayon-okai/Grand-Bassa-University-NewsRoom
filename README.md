@@ -31,6 +31,10 @@
   - Install Nodejs
   - open the project in your terminal
   - run npm -i command to install all of the node packages used
+  - type this command in terminal: npm -i nodemon
+  - run server by typing: nodemon app.js
+  - once the server is running you will get the status in your terminal
+  - open browser and paste - localhost:3000 in your URL bar
 
 ### Built with
 
