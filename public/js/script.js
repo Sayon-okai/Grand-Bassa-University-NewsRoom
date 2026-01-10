@@ -5,7 +5,17 @@ function showSideBar() {
 
 function hideSideBar() {
     $(".sidebar").css("display", "none");
-}
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("slide-right");
+    }
+  });
+});
+
+document.querySelectorAll(".author").forEach(el => observer.observe(el));
 
 
 // Get DOM Content

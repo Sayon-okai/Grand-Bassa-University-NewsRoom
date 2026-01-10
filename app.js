@@ -48,19 +48,7 @@ app.get("/index", (req, res) => {
 
 app.post("/register", (req, res) => {
   console.log(req.body.email);
-   res.render("index.ejs", {
-        data: post,
-        highOne: post[0],
-        highTwo: post[1],
-        highThree: post[3],
-
-       highOnePost: post[0].post.slice(0, 100) + '...',
-       highTwoPost: post[1].post.slice(0, 70) + '...',
-         highThreePost: post[3].post.slice(0, 70) + '...',
-       
-          
-
-     })
+   res.redirect("/news")
 });
 app.listen(port, () => {
    console.log(`server is running on port ${port}`); 

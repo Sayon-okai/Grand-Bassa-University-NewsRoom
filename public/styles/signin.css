@@ -84,6 +84,7 @@
       border: 1px solid hsl(0, 0%, 58%);
       border-radius: 10px;
       padding: 20px;
+      margin-bottom: 15px;
 
 
   }
@@ -198,8 +199,8 @@
   /* Banner */
   .banner-block {
 
-      background: url(../images/illustration-sign-up-desktop.svg);
-      margin-left: 40px;
+      background: url(../images/logo.jpg);
+      margin: 40px 30px 10px 70px;
       border-radius: 22px;
       background-repeat: no-repeat;
 
@@ -263,7 +264,7 @@
           width: 100%;
           height: 350px;
           order: -1;
-          background: url(../assets/images/illustration-sign-up-mobile.svg);
+          background: url(../images/illustration-sign-up-mobile.svg);
           margin-left: 0;
           border-radius: 0;
           border-bottom-left-radius: 10px;

@@ -3,7 +3,7 @@
 <main onclick="hideSideBar()">
            
 
-    <img src="/images/news_images/entrance_exam.jpg" alt="web 3 hero image" class="hero-pic">
+    <img src="/images/news_images/entrance_exam.jpg" alt="web 3 hero image" class="hero-pic slide-right">
 
     <section class="side-article">
         <!-- 
@@ -12,7 +12,7 @@
         <h2 class="special-text">New</h2>
         <article>
 
-            <h3><a href=""><%= highOne.title %></a></h3>
+            <h3 class="slide-up"><a href=""><%= highOne.title %></a></h3>
             <p>
                 <%= highOnePost %>
              
@@ -24,7 +24,7 @@
         <!-- line -->
         <hr>
         <article>
-            <h3><a href=""><%= highTwo.title %></a></h3>
+            <h3 class="slide-left"><a href=""><%= highTwo.title %></a></h3>
             <p>
                 <%= highTwoPost%>
 
@@ -34,7 +34,7 @@
         <!-- line -->
         <hr>
         <article>
-            <h3><a href=""><%= highThree.title%></a></h3>
+            <h3 class="slide-right"><a href=""><%= highThree.title%></a></h3>
             <p>
                 <%= highThreePost %>
                  <small><a href="#moreNews">read more</a></small>
@@ -104,7 +104,7 @@
 
        
 
-        <h2 class="author" id="moreNews">
+        <h2 class="author" id="moreNews" >
           Author:  <%= post.author %> 
 
             <small class="postid"> Post ID:
@@ -124,13 +124,13 @@
             <%= post.post %>
         
         </p>
-        <p class="post-date">
+        <p class="post-date slide-left">
             Posted On <%= post.date %>
         
         </p>
 
-        <div>
-            <img src="<%= post.picture %> " alt="<%= post.title %>" class="post-img">
+        <div class="post-img-block">
+            <img src="<%= post.picture %> " alt="<%= post.title %>" class="post-img slide-up" >
         </div>
 
         
