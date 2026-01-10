@@ -40,6 +40,7 @@
 ### What I learned
 
 - Using express route, passing locals to ejs templating 
+- rendering the news json data to user using ejs 
 
 
 ```js
@@ -63,6 +64,49 @@ app.get("/news", (req, res) => {
 app.get("/index", (req, res) => {
     res.redirect("/")
 })
+```
+
+```ejs
+     <% data.forEach(post => { %>
+    <section class="moreNews">
+
+       
+
+        <h2 class="author" id="moreNews" >
+          Author:  <%= post.author %> 
+
+            <small class="postid"> Post ID:
+                <%= post.id %>
+            </small>
+           
+        </h2> 
+       
+        
+        
+        <p class="post-title">
+           <em class="special-text">Title:</em> <%= post.title %>
+        </p>
+
+       
+        <p class="post"> 
+            <%= post.post %>
+        
+        </p>
+        <p class="post-date slide-left">
+            Posted On <%= post.date %>
+        
+        </p>
+
+        <div class="post-img-block">
+            <img src="<%= post.picture %> " alt="<%= post.title %>" class="post-img slide-up" >
+        </div>
+
+        
+
+
+        </section>
+    <%}); %>
+
 ```
 
 ## Author
