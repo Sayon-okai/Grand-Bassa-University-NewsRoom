@@ -1,6 +1,7 @@
 ## Table of contents
 
 - [Overview](#overview)
+- [Newfeatures](#new-feature)
 - [My process](#my-process)
 - [To Run This Project Do](#To-Run-This-Project)
   - [Built with](#built-with)
@@ -16,6 +17,10 @@
 - A dynamic university news website built with Node.js, Express, and EJS. The platform displays campus news, announcements, and events using data stored in JSON format. It features server-side rendering, reusable EJS partials, form handling, and static asset management for images and styles.
 
 - This project demonstrates practical full-stack development skills, including Express routing, dynamic content rendering, and structured project organization.
+
+## New Feature
+ - Real time weather info gathering feature base on user provided country
+ - added in the sidebar 
 
 ### Screenshot
 
