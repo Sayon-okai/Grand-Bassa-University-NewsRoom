@@ -247,7 +247,7 @@
       display: none;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media  (max-width: 580px) {
 
       /* sign-up-screen */
       .sign-up-screen {
@@ -262,9 +262,9 @@
 
       .sign-up-screen .banner-block {
           width: 100%;
-          height: 350px;
+          height: 370px;
           order: -1;
-          background: url(../images/illustration-sign-up-mobile.svg);
+          background: url(../images/logo.jpg);
           margin-left: 0;
           border-radius: 0;
           border-bottom-left-radius: 10px;

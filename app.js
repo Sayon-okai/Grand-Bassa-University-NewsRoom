@@ -28,11 +28,18 @@ app.get("/", (req, res) => {
 app.post("/getweather", async (req, res) => {
   const country = req.body.country;
 
-  // 1️⃣ Validate input
   if (!country) {
     return res.status(400).render("index.ejs", {
       result: null,
-      error: "Please enter a country name"
+      error: "Please enter a country name",
+     data: post,
+        highOne: post[0],
+        highTwo: post[1],
+        highThree: post[3],
+
+       highOnePost: post[0].post.slice(0, 100) + '...',
+       highTwoPost: post[1].post.slice(0, 70) + '...',
+         highThreePost: post[3].post.slice(0, 70) + '...',
     });
   }
 
@@ -41,11 +48,10 @@ app.post("/getweather", async (req, res) => {
       `https://api.weatherstack.com/current?access_key=${access_key}&query=${country}`
     );
 
-    console.log(getWeather.data);
-
-     res.render("index.ejs", {
-         
-        data: post,
+    res.render("index.ejs", {
+      result: getWeather.data, // send result always
+      error: null,
+      data: post,
         highOne: post[0],
         highTwo: post[1],
         highThree: post[3],
@@ -53,40 +59,43 @@ app.post("/getweather", async (req, res) => {
        highOnePost: post[0].post.slice(0, 100) + '...',
        highTwoPost: post[1].post.slice(0, 70) + '...',
          highThreePost: post[3].post.slice(0, 70) + '...',
-      result: getWeather.data,
-      error: null
     });
 
   } catch (error) {
-    console.error(
-      "Bad API request:",
-      error.response?.data || error.message
-    );
+    console.error("Bad API request:", error.response?.data || error.message);
 
     res.status(400).render("index.ejs", {
-      result: null,
-      error: "Invalid country name or API request failed"
+      result: null,             // ⚡ ALWAYS define result
+      error: "Country not found. Please try again.",
+      data: post,
+        highOne: post[0],
+        highTwo: post[1],
+        highThree: post[3],
+
+       highOnePost: post[0].post.slice(0, 100) + '...',
+       highTwoPost: post[1].post.slice(0, 70) + '...',
+         highThreePost: post[3].post.slice(0, 70) + '...',
     });
   }
 });
 
+
 app.get("/news", (req, res) => {
+ 
    res.render("index.ejs", {
        
       
-        data: post,
-        highOne: post[0],
-        highTwo: post[1],
-        highThree: post[3],
+      data: post,
+      highOne: post[0],
+      highTwo: post[1],
+      highThree: post[3],
 
-       highOnePost: post[0].post.slice(0, 100) + '...',
-       highTwoPost: post[1].post.slice(0, 70) + '...',
-         highThreePost: post[3].post.slice(0, 70) + '...',
+      highOnePost: post[0].post.slice(0, 100) + '...',
+      highTwoPost: post[1].post.slice(0, 70) + '...',
+      highThreePost: post[3].post.slice(0, 70) + '...',
        
-          
-
-     })
-})
+   })
+});
 
 app.get("/index", (req, res) => {
     res.redirect("/")

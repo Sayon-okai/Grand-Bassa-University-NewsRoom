@@ -10,60 +10,57 @@
      <section class="side-article">
    
         
-           <% if (locals.result) { %>
-            <div class="weather" style="background: url(../images/weather.jpeg);  background-repeat: no-repeat;
-                background-size: cover;">
+    <% if (locals.result) { %>
+        <div class="weather"
+            style="background: url(../images/weather.jpeg); background-repeat: no-repeat; background-size: cover;">
+
             <div class="weather-data">
-            
-                <div class="city">
-                    <!-- City -->
-                    City: <span>
+                <div class="city">  City: 
+                    <span>
                         <%= result.location.name %>
-                    </span>
+                    </span> 
                 </div>
-                <div class="country">
-                    <!-- City -->
-                    Country: <span>
+
+                <div class="country"> Country: 
+                    <span>
                         <%= result.location.country %>
-                    </span>
+                    </span> 
                 </div>
-                <div class="obs_time">
-                    <!-- City -->
-                    Observation Time: <span>
+
+                <div class="obs_time">  Observation Time:
+                    <span>
                         <%= result.current.observation_time %>
                     </span>
+                 </div>
+
+                <div class="temperature"> Temperature: 
+                    <span>
+                        <%= result.current.temperature %> <sup><%= result.request.unit %></sup>
+                    </span> 
                 </div>
-                <div class="temperature">
-                    <!-- City -->
-                    Temperature: <span><%= result.current.temperature %> <sup>result.request.unit</sup></span> 
-                </div>
-                <div class="weather_desc">
-                    <!-- City -->
-                    Weather Descriptions: <span><%= result.current.weather_descriptions %></span>
-                    <span><img src="<%= result.current.weather_icons[0]%>" alt="" srcset="Weather Icon"> </span>
-                </div>
-            
-            </div>
-            
-            <div class="instruction">
-                <h3>Get Your Country Weather Info</h3>
-                <p>Entry Country Name Below</p>
-            
-                <div class="time-info">
-                    Sunrise: <span class="sunrise"><%= result.current.astro.sunrise %></span> <br>
-                    Sunset: <span class="sunset"><%= result.current.astro.sunset %></span>
+                <div class="weather_desc">  Weather Descriptions: 
+                    <span>
+                        <%= result.current.weather_descriptions %>
+                    </span> 
+                    <br> <img src="<%= result.current.weather_icons[0]%>" alt="Weather Icon" srcset=""> 
                 </div>
             </div>
-            
-            
             </div>
-           <% } %> 
-           <% if (locals.error) { %>
+           
+            <div class="time-block">
+                <div class="time-info"> Sunrise: <span class="sunrise">
+                        <%= result.current.astro.sunrise %>
+                    </span> <br> Sunset: <span class="sunset">
+                        <%= result.current.astro.sunset %>
+                    </span> </div>
+            </div>
+        </div>
+        <% } %>
+            <% if (locals.error) { %>
                 <h2 style="color: red;">
                     <%= error %>
                 </h2>
-             <% } %>
-        
+                <% } %>
 
   <form action="/getweather" method="POST">
     <input type="text" name="country" id="search-box" placeholder="Search Country for Weather Info">
@@ -118,7 +115,10 @@
 
         
     </div>
-
+    <br>  
+      <!-- 
+        TODO: Content TO BE ADDED LATER 
+      -->
 
 </main>
 
