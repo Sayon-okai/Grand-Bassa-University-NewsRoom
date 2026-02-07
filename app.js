@@ -1,11 +1,13 @@
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
+import axios from 'axios';
 
 const app = express();
 
 let port = 3000;
-
+let URL = "https://api.weatherstack.com"
+let access_key = "f0a1290e7b7063044e71b08bbecd4bf8";
 // Setup
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -23,11 +25,55 @@ app.get("/", (req, res) => {
        res.render("signin.ejs",)
 });
 
+app.post("/getweather", async (req, res) => {
+  const country = req.body.country;
 
+  // 1️⃣ Validate input
+  if (!country) {
+    return res.status(400).render("index.ejs", {
+      result: null,
+      error: "Please enter a country name"
+    });
+  }
 
+  try {
+    const getWeather = await axios.get(
+      `https://api.weatherstack.com/current?access_key=${access_key}&query=${country}`
+    );
+
+    console.log(getWeather.data);
+
+     res.render("index.ejs", {
+         
+        data: post,
+        highOne: post[0],
+        highTwo: post[1],
+        highThree: post[3],
+
+       highOnePost: post[0].post.slice(0, 100) + '...',
+       highTwoPost: post[1].post.slice(0, 70) + '...',
+         highThreePost: post[3].post.slice(0, 70) + '...',
+      result: getWeather.data,
+      error: null
+    });
+
+  } catch (error) {
+    console.error(
+      "Bad API request:",
+      error.response?.data || error.message
+    );
+
+    res.status(400).render("index.ejs", {
+      result: null,
+      error: "Invalid country name or API request failed"
+    });
+  }
+});
 
 app.get("/news", (req, res) => {
-     res.render("index.ejs", {
+   res.render("index.ejs", {
+       
+      
         data: post,
         highOne: post[0],
         highTwo: post[1],
@@ -48,7 +94,8 @@ app.get("/index", (req, res) => {
 
 app.post("/register", (req, res) => {
   console.log(req.body.email);
-   res.redirect("/news")
+   res.redirect("/news"
+   )
 });
 app.listen(port, () => {
    console.log(`server is running on port ${port}`); 

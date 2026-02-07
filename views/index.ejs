@@ -5,7 +5,70 @@
 
     <img src="/images/news_images/entrance_exam.jpg" alt="web 3 hero image" class="hero-pic slide-right">
 
-    <section class="side-article">
+
+    
+     <section class="side-article">
+   
+        
+           <% if (locals.result) { %>
+            <div class="weather" style="background: url(../images/weather.jpeg);  background-repeat: no-repeat;
+                background-size: cover;">
+            <div class="weather-data">
+            
+                <div class="city">
+                    <!-- City -->
+                    City: <span>
+                        <%= result.location.name %>
+                    </span>
+                </div>
+                <div class="country">
+                    <!-- City -->
+                    Country: <span>
+                        <%= result.location.country %>
+                    </span>
+                </div>
+                <div class="obs_time">
+                    <!-- City -->
+                    Observation Time: <span>
+                        <%= result.current.observation_time %>
+                    </span>
+                </div>
+                <div class="temperature">
+                    <!-- City -->
+                    Temperature: <span><%= result.current.temperature %> <sup>result.request.unit</sup></span> 
+                </div>
+                <div class="weather_desc">
+                    <!-- City -->
+                    Weather Descriptions: <span><%= result.current.weather_descriptions %></span>
+                    <span><img src="<%= result.current.weather_icons[0]%>" alt="" srcset="Weather Icon"> </span>
+                </div>
+            
+            </div>
+            
+            <div class="instruction">
+                <h3>Get Your Country Weather Info</h3>
+                <p>Entry Country Name Below</p>
+            
+                <div class="time-info">
+                    Sunrise: <span class="sunrise"><%= result.current.astro.sunrise %></span> <br>
+                    Sunset: <span class="sunset"><%= result.current.astro.sunset %></span>
+                </div>
+            </div>
+            
+            
+            </div>
+           <% } %> 
+           <% if (locals.error) { %>
+                <h2 style="color: red;">
+                    <%= error %>
+                </h2>
+             <% } %>
+        
+
+  <form action="/getweather" method="POST">
+    <input type="text" name="country" id="search-box" placeholder="Search Country for Weather Info">
+    <input type="submit" value="Search" class="search-btn">
+  </form>
         <!-- 
         TODO: Content here will be load dynamically, from json data 
         -->
@@ -41,6 +104,7 @@
             </p>
 
         </article>
+        
     </section>
 
     <div class="web-gen">
@@ -51,6 +115,8 @@
             Administration, Academic Quality Assurance Committee and Lecturers.
             <button class="read-more"><a href="https://www.facebook.com/share/p/1Atnj9kx3u/" target="_blank">Read more</a></button>
         </article>
+
+        
     </div>
 
 

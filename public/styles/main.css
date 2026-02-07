@@ -213,7 +213,7 @@ main {
 .side-article {
     /* background-color: hsl(211, 15%, 55%); */
     width: 80%;
-    height: 720px;
+    height: 960px;
     display: flex;
     flex-direction: column;
     grid-column: span 2;
@@ -221,7 +221,7 @@ main {
     gap: 10px;
     padding: 10px;
     text-align: justify;
-    z-index: -999;
+    z-index: 1;
 }
 
 .side-article article {
@@ -431,6 +431,94 @@ main {
 .moreNews .post-img-block {
     z-index: -999;
 }
+
+.weather {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 530px;
+    border-radius: 10px;
+    margin-left: 20px;
+    
+    
+}
+
+.weather-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 200px;
+    margin: 60% 10px 10px 10px ;  
+    padding: 10px;
+    background-color: #064171aa;
+    
+   
+}
+
+.weather-data div {
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 900;
+        color: #db920b;
+     
+}
+
+.weather-data div span {
+    font-size: 1.2em;
+    color: #ededed;
+}
+
+.instruction {
+    position: absolute;
+    margin: 10px 0 0 10px;
+    
+    
+}
+
+.time-info {
+  
+   background-color: rgba(8, 7, 7, 0.27);
+   padding: 10px;
+   margin: 10px 0 20px 0;
+   font-size: 2em;
+   color: #fff;
+   border-radius: 10px;
+   
+  
+}
+.weather .instruction h3, p {
+    font-size: 1em;
+   
+}
+.weather .instruction  p {
+    font-size: 12px;
+  
+   
+}
+
+.side-article form .search-btn {
+     width: 40%;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    background-color: #2486d7;
+    color: #fff;
+
+    
+    
+}
+
+
+.side-article form .search-btn:hover{
+   cursor: pointer;
+   font-size: 15px;
+   background-color: #fff;
+    color:  #2486d7;
+    transition: all 0.5s ease;
+   
+}
+
 @media (max-width: 1200px) {
 
     /* hero-pic */
